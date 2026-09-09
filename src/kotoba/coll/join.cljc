@@ -1,13 +1,15 @@
 (ns kotoba.coll.join
-  "join -- one definition, addressed on its own.
+  "join -- addressed on its own.
 
-  Split out of kotoba.lang.text on 2026-09-09. The unit here is the
-  DEFINITION, not the library: this repo holds join and names, in its
-  deps.edn, exactly the definitions join reaches. Nothing else."
+  Split out of kotoba.lang.coll on 2026-09-09 (ADR-2609091200). The unit
+  here is the DEFINITION, and this repo's deps.edn names exactly the
+  definitions it reaches -- nothing else.
+"
   (:require [kotoba.coll.index :refer [index]]
             [kotoba.coll.invert-map :refer [invert-map]]
             [kotoba.coll.rename-keys :refer [rename-keys]]
-            [kotoba.coll.set-intersection :refer [set-intersection]]))
+            [kotoba.coll.set-intersection :refer [set-intersection]])
+)
 
 (defn join
   "Join two relations (sets of maps).
